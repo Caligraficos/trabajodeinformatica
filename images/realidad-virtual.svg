@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Visor de realidad virtual con ondas de luz y latido">
+  <defs>
+    <linearGradient id="bgV" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1140"/>
+      <stop offset="1" stop-color="#0b3d44"/>
+    </linearGradient>
+    <linearGradient id="lensV" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8f5cf5"/>
+      <stop offset="1" stop-color="#2fc3c9"/>
+    </linearGradient>
+    <radialGradient id="glowV" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2fc3c9" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2fc3c9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#bgV)"/>
+  <circle cx="240" cy="150" r="150" fill="url(#glowV)"/>
+  <circle cx="240" cy="150" r="110" fill="none" stroke="#8f5cf5" stroke-opacity="0.35" stroke-width="1.5"/>
+  <circle cx="240" cy="150" r="140" fill="none" stroke="#2fc3c9" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4 8"/>
+  <!-- Visor -->
+  <rect x="120" y="92" width="240" height="120" rx="48" fill="#0d0d1a" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2"/>
+  <circle cx="186" cy="152" r="40" fill="url(#lensV)"/>
+  <circle cx="294" cy="152" r="40" fill="url(#lensV)"/>
+  <circle cx="186" cy="152" r="16" fill="#ffffff" opacity="0.85"/>
+  <circle cx="294" cy="152" r="16" fill="#ffffff" opacity="0.85"/>
+  <path d="M226 152 h28" stroke="#ffffff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+  <!-- Latido -->
+  <path d="M60 240 H150 L168 220 L186 258 L204 236 L216 240 H420" fill="none" stroke="#2fc3c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="420" cy="60" r="6" fill="#8f5cf5"/>
+  <circle cx="60" cy="60" r="4" fill="#2fc3c9"/>
+</svg>
