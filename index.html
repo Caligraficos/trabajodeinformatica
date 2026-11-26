@@ -60,20 +60,15 @@
 
     /* Hero */
     .hero {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-      align-items: center; padding: 72px 0 96px;
+      text-align: center; padding: 72px 0 96px;
     }
     .hero h1 {
       font-size: clamp(2.1rem, 4vw, 3.1rem); line-height: 1.15;
       letter-spacing: -0.02em; font-weight: 600; margin-bottom: 24px;
     }
-    .hero p.lead { font-size: 1.1rem; color: var(--text); margin-bottom: 22px; max-width: 520px; }
+    .hero p.lead { font-size: 1.1rem; color: var(--text); margin: 0 auto 22px; max-width: 620px; }
     .hero .quiz { font-size: 1.05rem; margin-bottom: 32px; color: var(--text); }
-    .hero-art {
-      background: var(--bg-soft); border-radius: 20px;
-      aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center;
-      color: var(--purple); font-weight: 600;
-    }
+    .hero h1 { margin-left: auto; margin-right: auto; max-width: 900px; }
 
     /* Sections */
     section { padding: 88px 0; }
@@ -165,7 +160,7 @@
 
     @media (max-width: 900px) {
       nav { display: none; }
-      .hero, .split, .footer-grid { grid-template-columns: 1fr; }
+      .split, .footer-grid { grid-template-columns: 1fr; }
       .split.reverse .media { order: 0; }
       .cards, .benefits { grid-template-columns: 1fr; }
       .hero { padding: 48px 0 64px; gap: 32px; }
@@ -191,14 +186,11 @@
 
   <main>
     <div class="container hero">
-      <div>
-        <span class="eyebrow">Tu comunidad · Tu perspectiva · Tu espacio</span>
-        <h1>Un espacio de confianza para crecer con Caligraficos</h1>
-        <p class="lead">Texto breve que explica qué ofrece la marca y a quién ayuda. Reemplázalo por tu propio mensaje.</p>
-        <p class="quiz">¿No estás seguro de que sea para ti? <a href="#articulos">Revisa los artículos</a>.</p>
-        <a class="btn" href="mailto:contacto@ejemplo.com">Empezar gratis</a>
-      </div>
-      <div class="hero-art">Ilustración principal</div>
+      <span class="eyebrow">Tu comunidad · Tu perspectiva · Tu espacio</span>
+      <h1>Un espacio de confianza para crecer con Caligraficos</h1>
+      <p class="lead">Texto breve que explica qué ofrece la marca y a quién ayuda. Reemplázalo por tu propio mensaje.</p>
+      <p class="quiz">¿No estás seguro de que sea para ti? <a href="#articulos">Revisa los artículos</a>.</p>
+      <a class="btn" href="mailto:contacto@ejemplo.com">Empezar gratis</a>
     </div>
 
     <section id="articulos">
