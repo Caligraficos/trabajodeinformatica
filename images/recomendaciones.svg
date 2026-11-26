@@ -15,7 +15,7 @@
       <stop offset="1" stop-color="#0f7c86"/>
     </linearGradient>
   </defs>
-  <rect width="480" height="300" fill="#f4f5f9"/>
+  <rect width="480" height="300" fill="#e6e9f2"/>
   <circle class="ring" cx="240" cy="150" r="104" fill="none" stroke="url(#gR)" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="2 10"/>
   <g class="heart">
     <path d="M240 186 C200 160 184 136 196 116 C206 100 230 102 240 120 C250 102 274 100 284 116 C296 136 280 160 240 186 Z" fill="none" stroke="url(#gR)" stroke-width="1.6" stroke-linejoin="round"/>

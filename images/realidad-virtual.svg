@@ -14,7 +14,7 @@
       <stop offset="1" stop-color="#0f7c86"/>
     </linearGradient>
   </defs>
-  <rect width="480" height="300" fill="#f4f5f9"/>
+  <rect width="480" height="300" fill="#e6e9f2"/>
   <circle class="ring" cx="240" cy="150" r="108" fill="none" stroke="url(#gV)" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="1 8"/>
   <circle class="ring2" cx="240" cy="150" r="128" fill="none" stroke="#0d0d1a" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="30 14"/>
   <g class="visor">
