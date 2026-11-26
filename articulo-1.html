@@ -3,37 +3,186 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Título del primer artículo — Trabajo de Informatica</title>
+  <title>Plataformas digitales y salud mental infantil — Trabajo de Informatica</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="article.css">
 </head>
 <body>
 
+  <div class="progress"></div>
+
   <header>
     <div class="container">
-      <a class="logo" href="index.html" style="color: var(--text);">Trabajo de Informatica</a>
+      <a class="logo" href="index.html" style="color: var(--ink);">Trabajo de Informatica</a>
       <nav>
-        <a href="index.html#articulos">Artículos</a>
+        <a href="index.html#articulos">← Todos los artículos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <article class="article-page">
+
+    <!-- Encabezado -->
+    <section class="a-hero">
       <div class="container">
-        <div class="narrow">
-          <a class="back" href="index.html#articulos">← Volver a artículos</a>
-          <span class="eyebrow">Guía</span>
-          <h1>Título del primer artículo con una idea clara</h1>
-          <p class="lead">Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          <div class="hero-thumb thumb lilac">Imagen del artículo</div>
-          <p>Primer párrafo del artículo. Reemplázalo con el contenido real.</p>
-          <h2>Primer subtítulo</h2>
-          <p>Desarrollo de la idea principal. Reemplázalo con el contenido real.</p>
-          <h2>Segundo subtítulo</h2>
-          <p>Cierre o conclusión del artículo. Reemplázalo con el contenido real.</p>
+        <span class="kicker">Investigación documental · 2 a 8 años</span>
+        <h1>Pantallas, <em>crecimiento</em> y salud mental infantil</h1>
+        <p class="deck">¿Cuánto importa el tiempo frente a la pantalla y cuánto importa lo que el niño ve, con quién lo ve y qué deja de hacer por usarla?</p>
+        <div class="meta">
+          <span>Proyecto de Informática</span>
+          <span>Tipo documental y descriptivo</span>
+          <span>Población: niños de 2 a 8 años</span>
         </div>
       </div>
-    </article>
+    </section>
+
+    <!-- Contexto con cifras que se mueven -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">01 · Contexto</span>
+        <h2 class="sec-title reveal">Las pantallas ya forman parte de la <span class="hl">rutina diaria</span> de la primera infancia.</h2>
+        <p class="lede reveal">Celulares, tabletas, televisores y videojuegos acompañan a los niños para aprender, jugar y comunicarse. Por eso el tema no se limita a saber cuánto usan una pantalla: también importa cómo la usan.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num"><span data-to="292739" data-dec="0">0</span></div>
+            <div class="stat-label">niños analizados en una revisión de 2025 sobre pantallas y problemas socioemocionales</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="176742" data-dec="0">0</span></div>
+            <div class="stat-label">participantes de la primera infancia en un análisis de 100 estudios (JAMA Pediatrics, 2024)</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="132" data-dec="0">0</span></div>
+            <div class="stat-label">estudios incluidos en la revisión de 2025, de los cuales 117 fueron analizados</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="189" data-dec="0">0</span></div>
+            <div class="stat-label">adolescentes participaron en el antecedente venezolano sobre redes sociales</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factores: pestañas interactivas -->
+    <section class="a-sec tint">
+      <div class="container">
+        <span class="sec-label">02 · Factores</span>
+        <h2 class="sec-title reveal">No basta con medir las horas. Hay que mirar <span class="hl">el contexto</span>.</h2>
+
+        <div class="tabs" data-tabs>
+          <div class="tab-buttons" role="tablist">
+            <button class="tab-btn" role="tab" aria-selected="true">Tiempo de pantalla</button>
+            <button class="tab-btn" role="tab" aria-selected="false">Contenido</button>
+            <button class="tab-btn" role="tab" aria-selected="false">Sueño</button>
+            <button class="tab-btn" role="tab" aria-selected="false">Acompañamiento</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true">
+              <rect class="float" x="20" y="18" width="56" height="60" rx="10" fill="#ece4fc" stroke="#6b1ee6" stroke-width="2"/>
+              <path class="pulse" d="M28 48h10l5-10 8 20 6-12 4 2h7" fill="none" stroke="#0f7c86" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h3>Tiempo de pantalla</h3>
+              <p>Algunas revisiones encontraron <strong>asociaciones</strong> entre más tiempo frente a la pantalla y dificultades emocionales, de conducta y de atención, sobre todo en niños pequeños. Pero esas asociaciones <strong>no prueban que el tiempo sea la causa</strong>.</p>
+              <p>La relación además puede ir en ambos sentidos: más pantalla puede preceder a problemas socioemocionales, y esos problemas pueden llevar a usar más pantallas.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" hidden>
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true">
+              <circle class="float" cx="48" cy="48" r="28" fill="#d9f0f1" stroke="#0f7c86" stroke-width="2"/>
+              <path class="spin" d="M48 24v10M48 62v10M24 48h10M62 48h10" stroke="#6b1ee6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h3>Contenido</h3>
+              <p>El contenido <strong>apropiado para la edad</strong> y el uso acompañado por un adulto se distinguen del contenido violento o que no corresponde al desarrollo del niño. Este último se asoció con <strong>resultados psicosociales menos favorables</strong>.</p>
+              <p>Los videojuegos mostraron asociaciones más fuertes con problemas socioemocionales que otros usos de pantalla.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" hidden>
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true">
+              <path class="float" d="M62 22a26 26 0 1 0 12 40 22 22 0 0 1-12-40z" fill="#f3f1fb" stroke="#6b1ee6" stroke-width="2"/>
+              <circle class="float d2" cx="30" cy="28" r="3" fill="#0f7c86"/>
+              <circle class="float d3" cx="22" cy="44" r="2" fill="#0f7c86"/>
+            </svg>
+            <div>
+              <h3>Sueño</h3>
+              <p>El sueño aparece entre los resultados analizados en la literatura. Cuando la pantalla ocupa el tiempo de descanso, <strong>cambia la organización de la rutina</strong>. Por eso el sueño se trata como un aspecto <strong>relacionado con la forma de uso</strong>, no como un efecto automático.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" hidden>
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true">
+              <circle class="float" cx="36" cy="40" r="11" fill="#ece4fc" stroke="#6b1ee6" stroke-width="2"/>
+              <circle class="float d2" cx="62" cy="40" r="11" fill="#d9f0f1" stroke="#0f7c86" stroke-width="2"/>
+              <path class="float d3" d="M22 74c4-12 24-12 28 0M46 74c4-12 24-12 28 0" fill="none" stroke="#0d0d1a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h3>Acompañamiento</h3>
+              <p>Cuando el uso es <strong>compartido</strong>, se asoció de forma positiva con algunos resultados cognitivos. En cambio, el uso de pantallas por parte de los adultos durante las rutinas del niño se relacionó con resultados menos favorables.</p>
+              <p>Explicar lo que el niño observa, poner límites y elegir contenidos son formas de <strong>acompañar</strong> que pueden funcionar como factor protector.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparación de antecedentes -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">03 · Antecedentes</span>
+        <h2 class="sec-title reveal">Tres países, <span class="hl">una misma conclusión</span>: el tiempo no basta.</h2>
+
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Antecedente</th>
+                <th>Población</th>
+                <th>Enfoque</th>
+                <th>Aporte al proyecto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Venezuela</strong><br>Naveda Meléndez et al. (2025)</td>
+                <td>189 adolescentes</td>
+                <td>Redes sociales, autoestima, ansiedad y comunicación con los padres</td>
+                <td>Muestra la importancia del <span class="tag-pos">acompañamiento familiar</span></td>
+              </tr>
+              <tr>
+                <td><strong>México</strong><br>Valenzuela Ruiz et al. (2026)</td>
+                <td>18 estudios y revisiones</td>
+                <td>Uso temprano de pantallas y síntomas de ansiedad, depresión y atención</td>
+                <td>Asociaciones con <span class="tag-mid">ansiedad y atención</span>, sin probar culpa directa</td>
+              </tr>
+              <tr>
+                <td><strong>Colombia</strong><br>Garavito-Sanabria et al. (2022)</td>
+                <td>53 referencias</td>
+                <td>Lenguaje, sociabilidad, sueño y conducta</td>
+                <td>Los efectos varían según la <span class="tag-pos">edad y la supervisión</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntesis -->
+    <section class="a-sec tint-teal">
+      <div class="container">
+        <span class="sec-label">04 · Síntesis</span>
+        <p class="quote reveal">“Las plataformas digitales son un factor dentro de un entorno más amplio, no la causa única del malestar.”</p>
+
+        <div class="callout reveal">
+          <strong>Lo que dicen los resultados:</strong> el uso de pantallas puede relacionarse con el desarrollo socioemocional, el sueño y la convivencia familiar. Su efecto depende de <strong>qué se ve, cuánto dura, para qué se usa y quién acompaña</strong>.
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -46,5 +195,6 @@
     </div>
   </footer>
 
+  <script src="article.js"></script>
 </body>
 </html>

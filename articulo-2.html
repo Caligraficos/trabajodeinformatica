@@ -3,37 +3,226 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Título del segundo artículo — Trabajo de Informatica</title>
+  <title>Realidad virtual como analgésico — Trabajo de Informatica</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="article.css">
 </head>
 <body>
 
+  <div class="progress"></div>
+
   <header>
     <div class="container">
-      <a class="logo" href="index.html" style="color: var(--text);">Trabajo de Informatica</a>
+      <a class="logo" href="index.html" style="color: var(--ink);">Trabajo de Informatica</a>
       <nav>
-        <a href="index.html#articulos">Artículos</a>
+        <a href="index.html#articulos">← Todos los artículos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <article class="article-page">
+
+    <!-- Encabezado -->
+    <section class="a-hero">
       <div class="container">
-        <div class="narrow">
-          <a class="back" href="index.html#articulos">← Volver a artículos</a>
-          <span class="eyebrow">Consejos</span>
-          <h1>Título del segundo artículo con una idea clara</h1>
-          <p class="lead">Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          <div class="hero-thumb thumb purple">Imagen del artículo</div>
-          <p>Primer párrafo del artículo. Reemplázalo con el contenido real.</p>
-          <h2>Primer subtítulo</h2>
-          <p>Desarrollo de la idea principal. Reemplázalo con el contenido real.</p>
-          <h2>Segundo subtítulo</h2>
-          <p>Cierre o conclusión del artículo. Reemplázalo con el contenido real.</p>
+        <span class="kicker">Tecnología y salud · Trabajo de tesis</span>
+        <h1>Realidad virtual como <em>analgésico</em> no farmacológico</h1>
+        <p class="deck">Un visor de realidad virtual puede aliviar el dolor de procedimientos invasivos porque ocupa la atención que el cerebro daría al dolor. Así lo sostiene la evidencia revisada.</p>
+        <div class="meta">
+          <span>Universidad del Zulia · Facultad de Medicina</span>
+          <span>Cátedra de Informática</span>
+          <span>Octubre de 2026</span>
         </div>
       </div>
-    </article>
+    </section>
+
+    <!-- Cifras -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">01 · Cifras clave</span>
+        <h2 class="sec-title reveal">El dolor agudo y la ansiedad <span class="hl">bajan</span> con la inmersión.</h2>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">1,5<small>–3</small></div>
+            <div class="stat-label">puntos menos en las escalas EVA y Wong-Baker durante procedimientos dolorosos</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="1.39" data-dec="2" data-sign="-">0</span></div>
+            <div class="stat-label">reducción estandarizada de la ansiedad en pacientes pediátricos y en parto</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="73" data-dec="0" data-suffix="%">0</span><small>–85%</small></div>
+            <div class="stat-label">de satisfacción reportada por pacientes, familiares y personal de enfermería</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-to="26" data-dec="0" data-suffix="%">0</span></div>
+            <div class="stat-label">de la población adulta vive con dolor crónico, según las fuentes citadas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barras por dimensión -->
+    <section class="a-sec tint">
+      <div class="container">
+        <span class="sec-label">02 · Dónde actúa</span>
+        <h2 class="sec-title reveal">La mayor <span class="hl">reducción</span> se da en la dimensión cognitiva del dolor.</h2>
+        <p class="lede reveal">En el trabajo de parto, la realidad virtual disminuyó el dolor en sus tres dimensiones. Las barras muestran la reducción en puntos.</p>
+
+        <div class="bars reveal" style="--w: 0%;">
+          <div class="bar-row">
+            <div class="bar-label">Sensorial</div>
+            <div class="bar-track"><div class="bar-fill" style="--w: 48%;"></div></div>
+            <div class="bar-val">−1,5</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Afectiva</div>
+            <div class="bar-track"><div class="bar-fill" style="--w: 81%;"></div></div>
+            <div class="bar-val">−2,5</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Cognitiva</div>
+            <div class="bar-track"><div class="bar-fill" style="--w: 100%;"></div></div>
+            <div class="bar-val">−3,1</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Dolor global</div>
+            <div class="bar-track"><div class="bar-fill" style="--w: 58%; background: var(--ink);"></div></div>
+            <div class="bar-val">−1,81</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mecanismo -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">03 · Cómo funciona</span>
+        <h2 class="sec-title reveal">Tres pasos que explican <span class="hl">el alivio</span>.</h2>
+
+        <div class="stats" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:72px;height:72px;">
+              <path class="float" d="M14 52c10-16 58-16 68 0-10 14-58 14-68 0z" fill="#ece4fc" stroke="#6b1ee6" stroke-width="2"/>
+              <circle class="spin" cx="48" cy="52" r="7" fill="#6b1ee6"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.6rem; margin: 18px 0 8px;">Distracción inmersiva</h3>
+            <p class="stat-label">El entorno 3D absorbe la atención, que es un recurso limitado. Hay menos atención disponible para el dolor.</p>
+          </div>
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:72px;height:72px;">
+              <rect class="float d2" x="26" y="20" width="44" height="56" rx="8" fill="#d9f0f1" stroke="#0f7c86" stroke-width="2"/>
+              <path class="pulse" d="M34 48h8l4-8 6 16 4-8h6" fill="none" stroke="#0f7c86" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.6rem; margin: 18px 0 8px;">Compuerta del dolor</h3>
+            <p class="stat-label">Según Melzack y Wall, la regulación cognitiva puede frenar la señal dolorosa en la médula espinal.</p>
+          </div>
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:72px;height:72px;">
+              <circle class="float d3" cx="48" cy="48" r="26" fill="none" stroke="#6b1ee6" stroke-width="2" stroke-dasharray="6 6"/>
+              <circle cx="48" cy="48" r="10" fill="#0f7c86"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.6rem; margin: 18px 0 8px;">Menos actividad cerebral</h3>
+            <p class="stat-label">La neuroimagen muestra menor activación en la matriz del dolor: corteza somatosensorial, ínsula, cingulada anterior y tálamo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparación de tecnologías -->
+    <section class="a-sec tint-teal">
+      <div class="container">
+        <span class="sec-label">04 · Tecnología</span>
+        <h2 class="sec-title reveal">Cuanto más envolvente el visor, <span class="hl">mayor el alivio</span>.</h2>
+
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Criterio</th>
+                <th>Pantallas no inmersivas</th>
+                <th>Visor HMD inmersivo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Presencia</strong></td>
+                <td><span class="tag-mid">Media</span></td>
+                <td><span class="tag-pos">Alta</span>, aísla al paciente del entorno hospitalario</td>
+              </tr>
+              <tr>
+                <td><strong>Capacidad distractora</strong></td>
+                <td><span class="tag-mid">Menor</span></td>
+                <td><span class="tag-pos">Mayor</span>, la que más reduce el dolor autoinformado</td>
+              </tr>
+              <tr>
+                <td><strong>Uso típico</strong></td>
+                <td>Hidroterapia en niños con quemaduras</td>
+                <td>Procedimientos agudos y dolor crónico</td>
+              </tr>
+              <tr>
+                <td><strong>Contenido activo</strong></td>
+                <td>Viable, pero menos absorbente</td>
+                <td><span class="tag-pos">Más alivio</span> cuando el contenido es gamificado e interactivo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contextos clínicos: acordeón -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">05 · Contextos clínicos</span>
+        <h2 class="sec-title reveal">Cinco <span class="hl">escenarios</span> donde ya se aplica.</h2>
+
+        <div class="accordion">
+          <details>
+            <summary>Atención de quemaduras</summary>
+            <p>Acompaña la limpieza de heridas, los desbridamientos, los cambios de apósitos y la hidroterapia. También se usa en fisioterapia para reducir la kinesiofobia.</p>
+          </details>
+          <details>
+            <summary>Procedimientos con agujas</summary>
+            <p>Muy documentado en pediatría y oncología pediátrica durante extracciones de sangre, catéteres y punciones en reservorios.</p>
+          </details>
+          <details>
+            <summary>Maternidad y obstetricia</summary>
+            <p>Se aplica durante la dilatación y el borramiento del trabajo de parto, para amortiguar el dolor de las contracciones y reducir la sobrecarga emocional.</p>
+          </details>
+          <details>
+            <summary>Oncología</summary>
+            <p>Sirve como distracción no invasiva durante quimioterapias y procedimientos, mejorando la tolerancia al tratamiento.</p>
+          </details>
+          <details>
+            <summary>Dolor crónico musculoesquelético y neuropático</summary>
+            <p>Se evaluó en lumbalgia, dolor cervical y síndromes de más de tres meses, dentro de programas de rehabilitación motora.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguridad, límites y cita -->
+    <section class="a-sec tint">
+      <div class="container">
+        <span class="sec-label">06 · Seguridad y límites</span>
+        <h2 class="sec-title reveal">Un buen perfil de seguridad, <span class="hl">con retos</span> pendientes.</h2>
+
+        <div class="callout reveal">
+          <strong>Efectos adversos:</strong> son infrecuentes, leves y se resuelven solos, como fatiga visual o mareo transitorio (<em>cybersickness</em>). No suelen obligar a suspender la sesión.
+        </div>
+        <div class="callout reveal" style="border-left-color: var(--purple);">
+          <strong>Límites de la evidencia:</strong> hay mucha <strong>heterogeneidad</strong> entre estudios, falta <strong>capacitar al personal</strong> y la infraestructura tiene un costo importante.
+        </div>
+        <div class="callout reveal" style="border-left-color: #b4372b;">
+          <strong>Dato a verificar:</strong> la cifra de hasta un 30 % de reducción en medicación crónica proviene de una fuente que conviene revisar antes de citarla. Las fuentes no dan una cifra única de reducción de opioides para todas las especialidades.
+        </div>
+
+        <p class="quote reveal" style="margin-top: 56px;">“Se suma al tratamiento, no lo reemplaza.”</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -46,5 +235,6 @@
     </div>
   </footer>
 
+  <script src="article.js"></script>
 </body>
 </html>

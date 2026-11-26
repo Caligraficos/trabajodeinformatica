@@ -3,37 +3,171 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Título del tercer artículo — Trabajo de Informatica</title>
+  <title>Recomendaciones para un uso equilibrado — Trabajo de Informatica</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="article.css">
 </head>
 <body>
 
+  <div class="progress"></div>
+
   <header>
     <div class="container">
-      <a class="logo" href="index.html" style="color: var(--text);">Trabajo de Informatica</a>
+      <a class="logo" href="index.html" style="color: var(--ink);">Trabajo de Informatica</a>
       <nav>
-        <a href="index.html#articulos">Artículos</a>
+        <a href="index.html#articulos">← Todos los artículos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <article class="article-page">
+
+    <!-- Encabezado -->
+    <section class="a-hero">
       <div class="container">
-        <div class="narrow">
-          <a class="back" href="index.html#articulos">← Volver a artículos</a>
-          <span class="eyebrow">Noticias</span>
-          <h1>Título del tercer artículo con una idea clara</h1>
-          <p class="lead">Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          <div class="hero-thumb thumb yellow">Imagen del artículo</div>
-          <p>Primer párrafo del artículo. Reemplázalo con el contenido real.</p>
-          <h2>Primer subtítulo</h2>
-          <p>Desarrollo de la idea principal. Reemplázalo con el contenido real.</p>
-          <h2>Segundo subtítulo</h2>
-          <p>Cierre o conclusión del artículo. Reemplázalo con el contenido real.</p>
+        <span class="kicker">Guía práctica · Familias y docentes</span>
+        <h1>Pantallas con <em>equilibrio</em>, no con prohibición</h1>
+        <p class="deck">La tecnología puede ser una herramienta de aprendizaje y entretenimiento, siempre que no sustituya el sueño, el juego, el movimiento y la conversación.</p>
+        <div class="meta">
+          <span>Para padres y representantes</span>
+          <span>Para docentes e instituciones</span>
+          <span>Niños de 2 a 8 años</span>
         </div>
       </div>
-    </article>
+    </section>
+
+    <!-- Padres: lista interactiva -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">01 · En casa</span>
+        <h2 class="sec-title reveal">Reglas del hogar que <span class="hl">sí</span> se sostienen.</h2>
+        <p class="lede reveal">Marca los compromisos que ya cumples. La lista te muestra cuántos llevas.</p>
+
+        <div class="checklist" data-checklist>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt">Establecer <strong>límites de tiempo</strong> adecuados a la edad, sin que interfieran con el sueño, la alimentación o el juego.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt">Elegir <strong>contenidos apropiados</strong> para la edad: educativos, seguros y acordes al desarrollo del niño.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt"><strong>Acompañar</strong> al niño mientras usa las plataformas, explicarle lo que observa y responder sus preguntas.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt">Evitar que los dispositivos <strong>sustituyan</strong> la interacción familiar, el juego presencial y la actividad física.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt">Crear <strong>momentos sin pantallas</strong>, sobre todo durante las comidas y antes de dormir.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="box"></span>
+            <span class="txt">Observar cambios de <strong>comportamiento o ánimo</strong> cuando cambia el uso. Si las dificultades persisten, consultar a un profesional de salud.</span>
+          </label>
+        </div>
+        <div class="progress-count" data-checklist-count>0 de 6 compromisos marcados</div>
+      </div>
+    </section>
+
+    <!-- Docentes: tarjetas con iconos -->
+    <section class="a-sec tint">
+      <div class="container">
+        <span class="sec-label">02 · En la escuela</span>
+        <h2 class="sec-title reveal">Educación digital <span class="hl">desde temprano</span>.</h2>
+
+        <div class="stats" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:64px;height:64px;">
+              <rect class="float" x="22" y="26" width="52" height="40" rx="6" fill="#ece4fc" stroke="#6b1ee6" stroke-width="2"/>
+              <path class="pulse" d="M30 46h8l4-6 6 12 4-6h8" fill="none" stroke="#0f7c86" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.5rem; margin: 18px 0 10px;">Enseñar a usar la tecnología</h3>
+            <p class="stat-label">Enseñar de forma progresiva, segura y responsable, desde las primeras edades.</p>
+          </div>
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:64px;height:64px;">
+              <circle class="float d2" cx="36" cy="40" r="10" fill="#d9f0f1" stroke="#0f7c86" stroke-width="2"/>
+              <circle class="float d3" cx="62" cy="40" r="10" fill="#ece4fc" stroke="#6b1ee6" stroke-width="2"/>
+              <path d="M22 72c4-10 24-10 28 0M46 72c4-10 24-10 28 0" fill="none" stroke="#0d0d1a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.5rem; margin: 18px 0 10px;">Orientar a las familias</h3>
+            <p class="stat-label">Equilibrar lo digital con el juego, el movimiento, el descanso y la convivencia.</p>
+          </div>
+          <div class="stat">
+            <svg class="ico" viewBox="0 0 96 96" aria-hidden="true" style="width:64px;height:64px;">
+              <circle class="spin" cx="48" cy="48" r="24" fill="none" stroke="#6b1ee6" stroke-width="2" stroke-dasharray="8 6"/>
+              <circle class="float" cx="48" cy="48" r="8" fill="#0f7c86"/>
+            </svg>
+            <h3 style="font-family: var(--serif); font-size: 1.5rem; margin: 18px 0 10px;">Usar recursos con criterio</h3>
+            <p class="stat-label">Los recursos digitales complementan la enseñanza. No deben reemplazar la experiencia directa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparación: hábito, riesgo, alternativa -->
+    <section class="a-sec">
+      <div class="container">
+        <span class="sec-label">03 · Cambiar el hábito</span>
+        <h2 class="sec-title reveal">Del hábito de riesgo a <span class="hl">la alternativa</span>.</h2>
+
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Hábito</th>
+                <th>Riesgo que señala la evidencia</th>
+                <th>Alternativa sugerida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Pantalla antes de dormir</strong></td>
+                <td><span class="tag-neg">Alteraciones del sueño</span></td>
+                <td><span class="tag-pos">Lectura o cuento</span> sin dispositivos</td>
+              </tr>
+              <tr>
+                <td><strong>Pantalla durante la comida</strong></td>
+                <td><span class="tag-neg">Menos convivencia</span></td>
+                <td><span class="tag-pos">Conversar</span> en la mesa</td>
+              </tr>
+              <tr>
+                <td><strong>Contenido sin filtro</strong></td>
+                <td><span class="tag-neg">Resultados psicosociales menos favorables</span></td>
+                <td><span class="tag-pos">Contenido apropiado</span> y revisado juntos</td>
+              </tr>
+              <tr>
+                <td><strong>Uso solo</strong></td>
+                <td><span class="tag-mid">Menos mediación de los adultos</span></td>
+                <td><span class="tag-pos">Uso compartido</span> con explicación</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cita y señales de alerta -->
+    <section class="a-sec tint-teal">
+      <div class="container">
+        <span class="sec-label">04 · Recomendación del equipo</span>
+        <p class="quote reveal">“Límites adecuados, sin convertir la tecnología en una prohibición absoluta.”</p>
+        <div class="callout reveal" style="margin-top: 48px;">
+          <strong>Cuándo consultar a un profesional:</strong> si el niño presenta cambios persistentes de ánimo, de conducta o de sueño que preocupan a la familia cuando se modifica su uso de dispositivos.
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -46,5 +180,6 @@
     </div>
   </footer>
 
+  <script src="article.js"></script>
 </body>
 </html>
