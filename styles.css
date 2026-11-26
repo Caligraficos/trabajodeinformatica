@@ -67,10 +67,11 @@ nav a:hover { text-decoration: none; color: var(--purple); }
 }
 .hero > .container { position: relative; z-index: 1; }
 .hero h1 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 1.02;
-  letter-spacing: -0.02em; font-weight: 600; margin: 0 auto 24px; max-width: 900px;
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.6rem, 6.4vw, 5.2rem); line-height: 1.08;
+  letter-spacing: -0.015em; font-weight: 700; margin: 0 auto;
 }
+.hero h1 em { font-style: italic; font-weight: 600; color: var(--purple); }
 .hero p.lead { font-size: 1.1rem; color: var(--text); margin: 0 auto 22px; max-width: 620px; }
 .hero .quiz { font-size: 1.05rem; margin-bottom: 32px; color: var(--text); }
 
@@ -141,3 +142,9 @@ footer.site-footer {
 .article .thumb { overflow: hidden; padding: 0; background: none; }
 .article .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .article-link:hover .thumb img { transform: scale(1.05); }
+
+/* Encabezado de portada: QR, logo y contador */
+.brand-group { display: flex; align-items: center; gap: 16px; }
+.qr { width: 46px; height: 46px; border-radius: 6px; border: 1px solid var(--line); padding: 3px; background: #fff; }
+.visits { display: inline-flex; align-items: center; }
+.visits:hover { text-decoration: none; }

@@ -1,26 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Luna, libro, corazón y marca de verificación en equilibrio">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Icono animado de corazón con latido">
+  <style>
+    .ring { transform-origin: 240px 150px; animation: spin 20s linear infinite; }
+    .heart { animation: beat 2.4s ease-in-out infinite; transform-origin: 240px 150px; }
+    .moon { animation: float 5s ease-in-out infinite; transform-origin: 240px 150px; }
+    .dot { animation: twinkle 3s ease-in-out infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes beat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.08); } 30% { transform: scale(1); } 45% { transform: scale(1.05); } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes twinkle { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+  </style>
   <defs>
-    <linearGradient id="bgR" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fdf6dc"/>
-      <stop offset="1" stop-color="#e9f5f5"/>
+    <linearGradient id="gR" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b79cff"/>
+      <stop offset="1" stop-color="#5fd6dc"/>
     </linearGradient>
   </defs>
-  <rect width="480" height="300" fill="url(#bgR)"/>
-  <circle cx="90" cy="90" r="58" fill="#fde68a" opacity="0.7"/>
-  <circle cx="110" cy="72" r="50" fill="#fdf6dc"/>
-  <!-- Libro -->
-  <g transform="translate(190 120)">
-    <path d="M0 20 Q50 2 100 20 L100 110 Q50 92 0 110 Z" fill="#ffffff" stroke="#0d0d1a" stroke-width="2"/>
-    <path d="M100 20 Q150 2 200 20 L200 110 Q150 92 100 110 Z" fill="#ffffff" stroke="#0d0d1a" stroke-width="2"/>
-    <path d="M100 20 L100 110" stroke="#6b1ee6" stroke-width="3"/>
-    <path d="M18 50 Q50 40 82 50 M18 70 Q50 60 82 70 M118 50 Q150 40 182 50 M118 70 Q150 60 182 70" fill="none" stroke="#0f7c86" stroke-width="2" stroke-linecap="round"/>
+  <rect width="480" height="300" fill="#0d0d1a"/>
+  <circle class="ring" cx="240" cy="150" r="104" fill="none" stroke="url(#gR)" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="2 10"/>
+  <g class="heart">
+    <path d="M240 186 C200 160 184 136 196 116 C206 100 230 102 240 120 C250 102 274 100 284 116 C296 136 280 160 240 186 Z" fill="none" stroke="url(#gR)" stroke-width="1.6" stroke-linejoin="round"/>
   </g>
-  <!-- Corazón -->
-  <path d="M390 120 C372 96 340 110 352 140 L390 180 L428 140 C440 110 408 96 390 120 Z" fill="#6b1ee6"/>
-  <!-- Marca de verificación -->
-  <circle cx="390" cy="230" r="28" fill="#0f7c86"/>
-  <path d="M376 230 l10 10 l18 -20" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Acentos -->
-  <circle cx="60" cy="250" r="8" fill="#6b1ee6" opacity="0.6"/>
-  <circle cx="440" cy="50" r="5" fill="#0f7c86" opacity="0.6"/>
+  <g class="moon">
+    <path d="M360 96 A22 22 0 1 0 380 124 A17 17 0 1 1 360 96 Z" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2"/>
+  </g>
+  <circle class="dot" cx="110" cy="200" r="2.5" fill="#5fd6dc"/>
+  <circle class="dot" cx="120" cy="92" r="2" fill="#b79cff" style="animation-delay:-1s"/>
+  <circle class="dot" cx="380" cy="208" r="2" fill="#5fd6dc" style="animation-delay:-2s"/>
 </svg>
