@@ -4,170 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trabajo de Informatica</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --bg-soft: #f4f5f9;
-      --text: #0d0d1a;
-      --muted: #5a5f70;
-      --purple: #6b1ee6;
-      --purple-dark: #5513c0;
-      --purple-soft: #ece4fc;
-      --yellow-soft: #fde68a;
-      --lilac-soft: #d8ccf5;
-      --line: #e4e6ee;
-      --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--purple); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
-
-    /* Header */
-    header { background: var(--bg); }
-    header .container {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 76px;
-    }
-    .logo { font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; color: var(--text); }
-    nav { display: flex; gap: 32px; align-items: center; }
-    nav a { color: var(--text); font-size: 0.97rem; font-weight: 500; }
-    nav a:hover { text-decoration: none; color: var(--purple); }
-    .header-actions { display: flex; gap: 22px; align-items: center; }
-    .header-actions a { color: var(--text); font-weight: 500; }
-
-    /* Buttons */
-    .btn {
-      display: inline-block; padding: 14px 24px; border-radius: 8px;
-      background: var(--purple); color: #fff; font-weight: 600; font-size: 1rem;
-    }
-    .btn:hover { background: var(--purple-dark); text-decoration: none; color: #fff; }
-    .btn-small { padding: 10px 18px; font-size: 0.95rem; }
-
-    /* Eyebrow (monospace caps) */
-    .eyebrow {
-      display: block; font-family: var(--mono); font-size: 0.85rem;
-      color: var(--purple); text-transform: uppercase; letter-spacing: 0.04em;
-      margin-bottom: 18px;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center; padding: 72px 0 96px;
-    }
-    .hero h1 {
-      font-size: clamp(2.1rem, 4vw, 3.1rem); line-height: 1.15;
-      letter-spacing: -0.02em; font-weight: 600; margin-bottom: 24px;
-    }
-    .hero p.lead { font-size: 1.1rem; color: var(--text); margin: 0 auto 22px; max-width: 620px; }
-    .hero .quiz { font-size: 1.05rem; margin-bottom: 32px; color: var(--text); }
-    .hero h1 { margin-left: auto; margin-right: auto; max-width: 900px; }
-
-    /* Sections */
-    section { padding: 88px 0; }
-    section.soft { background: var(--bg-soft); }
-    .section-head { margin-bottom: 44px; }
-    .section-head h2 {
-      font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.2;
-      font-weight: 600; letter-spacing: -0.02em; margin-bottom: 14px;
-    }
-    .section-head p { color: var(--muted); max-width: 640px; font-size: 1.05rem; }
-
-    /* Article cards */
-    .cards {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-    }
-    .article .thumb {
-      border-radius: 14px; aspect-ratio: 16 / 10; margin-bottom: 22px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 600; color: var(--text);
-    }
-    .thumb.lilac { background: var(--lilac-soft); }
-    .thumb.purple { background: var(--purple); color: #fff; }
-    .thumb.yellow { background: var(--yellow-soft); }
-    .article .category {
-      display: block; font-family: var(--mono); font-size: 0.8rem;
-      color: var(--purple); text-transform: uppercase; letter-spacing: 0.04em;
-      margin-bottom: 10px;
-    }
-    .article h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.35; margin-bottom: 10px; }
-    .article p { color: var(--muted); font-size: 0.97rem; }
-
-    /* Split (beneficios) */
-    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-    .split + .split { margin-top: 88px; }
-    .split h3 { font-size: 1.9rem; font-weight: 600; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.01em; }
-    .split p { color: var(--muted); margin-bottom: 26px; font-size: 1.02rem; }
-    .media {
-      background: var(--purple-soft); border-radius: 18px;
-      aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
-      color: var(--purple); font-weight: 600;
-    }
-
-    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .benefit .media { margin-bottom: 22px; }
-    .benefit h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
-    .benefit p { color: var(--muted); font-size: 0.97rem; }
-
-    /* Testimonio */
-    blockquote {
-      max-width: 820px; margin: 0 auto; text-align: center;
-      font-size: 1.6rem; line-height: 1.4; font-weight: 500; letter-spacing: -0.01em;
-    }
-    blockquote footer {
-      margin-top: 24px; font-family: var(--mono); font-size: 0.9rem; color: var(--muted);
-    }
-
-    /* FAQ */
-    .faq { max-width: 820px; }
-    details {
-      border-bottom: 1px solid var(--line); padding: 22px 0;
-    }
-    summary { font-weight: 600; font-size: 1.1rem; cursor: pointer; list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; float: right; color: var(--purple); font-size: 1.3rem; line-height: 1; }
-    details[open] summary::after { content: "−"; }
-    details p { color: var(--muted); margin-top: 12px; }
-
-    /* CTA */
-    .cta {
-      background: var(--purple); color: #fff; border-radius: 24px;
-      padding: 72px 40px; text-align: center;
-    }
-    .cta h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; margin-bottom: 14px; }
-    .cta p { opacity: 0.9; margin-bottom: 30px; font-size: 1.05rem; }
-    .cta .btn { background: #fff; color: var(--purple); }
-    .cta .btn:hover { background: var(--purple-soft); }
-
-    /* Footer */
-    footer.site-footer {
-      background: var(--bg-soft); padding: 64px 0 36px; font-size: 0.93rem; color: var(--muted);
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px;
-    }
-    .footer-grid h4 { color: var(--text); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600; }
-    .footer-grid a { display: block; color: var(--muted); margin-bottom: 8px; }
-    .footer-grid a:hover { color: var(--purple); text-decoration: none; }
-    .copy { border-top: 1px solid var(--line); padding-top: 24px; }
-
-    @media (max-width: 900px) {
-      nav { display: none; }
-      .split, .footer-grid { grid-template-columns: 1fr; }
-      .split.reverse .media { order: 0; }
-      .cards, .benefits { grid-template-columns: 1fr; }
-      .hero { padding: 48px 0 64px; gap: 32px; }
-      section { padding: 64px 0; }
-      .split + .split { margin-top: 56px; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -177,21 +14,18 @@
       <nav>
         <a href="#articulos">Artículos</a>
       </nav>
-      <div class="header-actions">
-        <a href="mailto:contacto@ejemplo.com">Iniciar sesión</a>
-        <a class="btn btn-small" href="mailto:contacto@ejemplo.com">Registrarse</a>
-      </div>
     </div>
   </header>
 
   <main>
-    <div class="container hero">
-      <span class="eyebrow">Tu comunidad · Tu perspectiva · Tu espacio</span>
-      <h1>Un espacio de confianza para crecer con Caligraficos</h1>
-      <p class="lead">Texto breve que explica qué ofrece la marca y a quién ayuda. Reemplázalo por tu propio mensaje.</p>
-      <p class="quiz">¿No estás seguro de que sea para ti? <a href="#articulos">Revisa los artículos</a>.</p>
-      <a class="btn" href="mailto:contacto@ejemplo.com">Empezar gratis</a>
-    </div>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Tu comunidad · Tu perspectiva · Tu espacio</span>
+        <h1>Un espacio de confianza para crecer con Trabajo de Informatica</h1>
+        <p class="lead">Texto breve que explica qué ofrece la marca y a quién ayuda. Reemplázalo por tu propio mensaje.</p>
+        <p class="quiz">¿No estás seguro de que sea para ti? <a href="#articulos">Revisa los artículos</a>.</p>
+      </div>
+    </section>
 
     <section id="articulos">
       <div class="container">
@@ -201,47 +35,42 @@
           <p>Explora artículos y guías. Sustituye estos títulos por tu contenido real.</p>
         </div>
         <div class="cards">
-          <div class="article">
-            <div class="thumb lilac">Imagen del artículo</div>
-            <span class="category">Guía</span>
-            <h3>Título del primer artículo con una idea clara</h3>
-            <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          </div>
-          <div class="article">
-            <div class="thumb purple">Imagen del artículo</div>
-            <span class="category">Consejos</span>
-            <h3>Título del segundo artículo con una idea clara</h3>
-            <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          </div>
-          <div class="article">
-            <div class="thumb yellow">Imagen del artículo</div>
-            <span class="category">Noticias</span>
-            <h3>Título del tercer artículo con una idea clara</h3>
-            <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
-          </div>
+          <a class="article-link" href="articulo-1.html">
+            <div class="article">
+              <div class="thumb lilac">Imagen del artículo</div>
+              <span class="category">Guía</span>
+              <h3>Título del primer artículo con una idea clara</h3>
+              <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
+            </div>
+          </a>
+          <a class="article-link" href="articulo-2.html">
+            <div class="article">
+              <div class="thumb purple">Imagen del artículo</div>
+              <span class="category">Consejos</span>
+              <h3>Título del segundo artículo con una idea clara</h3>
+              <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
+            </div>
+          </a>
+          <a class="article-link" href="articulo-3.html">
+            <div class="article">
+              <div class="thumb yellow">Imagen del artículo</div>
+              <span class="category">Noticias</span>
+              <h3>Título del tercer artículo con una idea clara</h3>
+              <p>Resumen breve del artículo para que el lector decida si quiere leerlo.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-
-      </main>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Caligraficos</h4>
-          <p>Descripción breve de la marca.</p>
-        </div>
-        <div>
-          <h4>Enlaces</h4>
-            <a href="#articulos">Artículos</a>
-          </div>
-        <div>
-          <h4>Contacto</h4>
-          <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
-        </div>
+      <div class="footer-brand">
+        <h4>Trabajo de Informatica</h4>
+        <p>Descripción breve de la marca.</p>
       </div>
-      <div class="copy">© 2026 Caligraficos. Todos los derechos reservados.</div>
+      <div class="copy">© 2026 Trabajo de Informatica. Todos los derechos reservados.</div>
     </div>
   </footer>
 
