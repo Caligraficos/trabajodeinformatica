@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caligraficos</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --text: #1a2233;
+      --muted: #5b6577;
+      --accent: #1f6feb;
+      --accent-dark: #1657bd;
+      --line: #e3e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 10;
+    }
+    header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .logo { font-weight: 800; font-size: 1.25rem; color: var(--text); }
+    nav a { color: var(--muted); margin-left: 24px; font-size: 0.95rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 8px;
+      background: var(--accent); color: #fff; font-weight: 600;
+    }
+    .btn:hover { background: var(--accent-dark); text-decoration: none; }
+    .btn-outline {
+      background: transparent; color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .btn-outline:hover { background: #eaf2ff; }
+
+    .hero { padding: 96px 0 72px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-size: 0.85rem; font-weight: 600;
+      color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15;
+      max-width: 800px; margin: 0 auto 20px;
+    }
+    .hero p.lead {
+      font-size: 1.15rem; color: var(--muted);
+      max-width: 620px; margin: 0 auto 32px;
+    }
+    .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    section { padding: 72px 0; }
+    section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { text-align: center; margin-bottom: 48px; }
+    .section-head h2 { font-size: 2rem; margin-bottom: 12px; }
+    .section-head p { color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+    .split {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    }
+    .split.reverse .media { order: -1; }
+    .media {
+      background: linear-gradient(135deg, #dbe8ff, #eef4ff);
+      border-radius: 16px; aspect-ratio: 4 / 3;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-weight: 600;
+    }
+    .split h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .split p { color: var(--muted); margin-bottom: 20px; }
+
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 14px; padding: 28px;
+    }
+    .card .tag { font-size: 0.8rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .card h3 { margin: 8px 0 10px; font-size: 1.2rem; }
+    .card p { color: var(--muted); font-size: 0.97rem; }
+
+    blockquote {
+      max-width: 760px; margin: 0 auto; text-align: center;
+      font-size: 1.35rem; line-height: 1.5;
+    }
+    blockquote footer { margin-top: 20px; font-size: 0.95rem; color: var(--muted); font-style: normal; }
+
+    details {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 10px; padding: 18px 22px; margin-bottom: 12px;
+      max-width: 760px; margin-left: auto; margin-right: auto;
+    }
+    summary { font-weight: 600; cursor: pointer; }
+    details p { color: var(--muted); margin-top: 10px; }
+
+    .cta-band {
+      background: var(--accent); color: #fff; text-align: center;
+      border-radius: 20px; padding: 64px 32px;
+    }
+    .cta-band h2 { font-size: 2rem; margin-bottom: 12px; }
+    .cta-band p { opacity: 0.9; margin-bottom: 28px; }
+    .cta-band .btn { background: #fff; color: var(--accent); }
+    .cta-band .btn:hover { background: #eaf2ff; }
+
+    footer.site-footer {
+      background: var(--surface); border-top: 1px solid var(--line);
+      padding: 48px 0 32px; font-size: 0.92rem; color: var(--muted);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 32px;
+    }
+    .footer-grid h4 { color: var(--text); margin-bottom: 10px; font-size: 0.95rem; }
+    .footer-grid a { display: block; color: var(--muted); margin-bottom: 6px; }
+    .copy { border-top: 1px solid var(--line); padding-top: 20px; }
+
+    @media (max-width: 800px) {
+      nav { display: none; }
+      .split, .footer-grid { grid-template-columns: 1fr; }
+      .split.reverse .media { order: 0; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding: 64px 0 48px; }
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="logo">Caligraficos</span>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonio">Testimonios</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <span class="eyebrow">Bienvenido</span>
+      <h1>Tu comunidad de confianza para crecer con Caligraficos</h1>
+      <p class="lead">Texto breve que explica qué ofrece la marca y a quién ayuda. Reemplázalo por tu propio mensaje.</p>
+      <div class="actions">
+        <a class="btn" href="#contacto">Empezar ahora</a>
+        <a class="btn btn-outline" href="#servicios">Conocer más</a>
+      </div>
+    </div>
+
+    <section id="servicios" class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Servicios</span>
+          <h2>Lo que hacemos</h2>
+          <p>Tres áreas principales. Cambia estos textos por los servicios reales.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <span class="tag">Conectar</span>
+            <h3>Red de contactos</h3>
+            <p>Descripción breve de este servicio y de lo que obtiene el cliente.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Crear</span>
+            <h3>Contenido propio</h3>
+            <p>Descripción breve de este servicio y de lo que obtiene el cliente.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Crecer</span>
+            <h3>Acompañamiento</h3>
+            <p>Descripción breve de este servicio y de lo que obtiene el cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+        <div class="split">
+          <div class="media">Imagen 1</div>
+          <div>
+            <span class="eyebrow">Beneficios</span>
+            <h3>Un título que explique el primer beneficio</h3>
+            <p>Párrafo corto que desarrolla el beneficio y da confianza al visitante para seguir leyendo.</p>
+            <a class="btn btn-outline" href="#contacto">Saber más</a>
+          </div>
+        </div>
+        <div class="split reverse" style="margin-top: 72px;">
+          <div>
+            <span class="eyebrow">Resultados</span>
+            <h3>Un título que explique el segundo beneficio</h3>
+            <p>Párrafo corto que desarrolla el beneficio y da confianza al visitante para seguir leyendo.</p>
+            <a class="btn btn-outline" href="#contacto">Saber más</a>
+          </div>
+          <div class="media">Imagen 2</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonio" class="alt">
+      <div class="container">
+        <blockquote>
+          “Aquí va el testimonio de un cliente real. Reemplázalo con una cita verdadera y con permiso de quien la dio.”
+          <footer>— Nombre del cliente, cargo</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Dudas comunes</h2>
+        </div>
+        <details open>
+          <summary>¿Cómo empiezo?</summary>
+          <p>Respuesta breve a la pregunta. Reemplázala con la información real.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Respuesta breve a la pregunta. Reemplázala con la información real.</p>
+        </details>
+        <details>
+          <summary>¿Dónde puedo consultar más?</summary>
+          <p>Respuesta breve a la pregunta. Reemplázala con la información real.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="cta-band">
+          <h2>¿Listo para empezar?</h2>
+          <p>Escríbenos y te respondemos a la brevedad.</p>
+          <a class="btn" href="mailto:contacto@ejemplo.com">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Caligraficos</h4>
+          <p>Descripción breve de la marca.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <a href="#servicios">Servicios</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#preguntas">Preguntas</a>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
+        </div>
+      </div>
+      <div class="copy">© 2026 Caligraficos. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
