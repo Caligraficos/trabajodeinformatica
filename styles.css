@@ -50,12 +50,22 @@ nav a:hover { text-decoration: none; color: var(--purple); }
 
 /* Portada con fondo de medicina y tecnología (solo esta sección) */
 .hero {
+  position: relative;
   text-align: center;
   padding: 96px 0 112px;
-  background-color: #f7f5fe;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'><g fill='none' stroke='%236b1ee6' stroke-opacity='0.14' stroke-width='2' stroke-linecap='round'><path d='M40 30v30M25 45h30'/><path d='M190 150v30M175 165h30'/><path d='M120 200v22M109 211h22'/><path d='M30 130H70V160H100'/><path d='M150 40H200V80H230'/><path d='M210 200H250V230'/><circle cx='100' cy='60' r='4'/><circle cx='100' cy='160' r='4'/><circle cx='230' cy='80' r='4'/><circle cx='250' cy='230' r='4'/></g></svg>");
-  background-size: 260px 260px;
+  background-color: #dfe9f2;
+  background-image: url("images/portada-fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.86) 100%);
+  z-index: 0;
+}
+.hero > .container { position: relative; z-index: 1; }
 .hero h1 {
   font-size: clamp(2.1rem, 4vw, 3.1rem); line-height: 1.15;
   letter-spacing: -0.02em; font-weight: 600; margin: 0 auto 24px; max-width: 900px;
