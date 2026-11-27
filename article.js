@@ -68,11 +68,11 @@
     var suffix = el.getAttribute("data-suffix") || "";
     var from = parseFloat(el.getAttribute("data-from") || "0");
     if (reduce) { el.textContent = sign + fmt(to, dec) + suffix; return; }
-    var start = null, dur = 1600;
+    var start = null, dur = 950;
     function step(ts) {
       if (start === null) start = ts;
       var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
+      var eased = 1 - Math.pow(1 - p, 4);
       var v = from + (to - from) * eased;
       el.textContent = sign + fmt(Math.abs(v), dec) + suffix;
       if (p < 1) requestAnimationFrame(step);
@@ -93,6 +93,19 @@
 
   document.querySelectorAll(".reveal, .hl, .stat, .bars, [data-to]").forEach(function (el) {
     io.observe(el);
+  });
+
+
+  document.querySelectorAll("table[data-sortable]").forEach(function(table){
+    table.querySelectorAll("thead button[data-sort]").forEach(function(btn){btn.addEventListener("click",function(){
+      var col=Number(btn.getAttribute("data-sort"));var dir=btn.getAttribute("data-dir")==="asc"?"desc":"asc";
+      table.querySelectorAll("thead button[data-sort]").forEach(function(b){b.removeAttribute("data-dir");});btn.setAttribute("data-dir",dir);
+      var body=table.tBodies[0];Array.from(body.rows).sort(function(a,b){
+        var av=a.cells[col].getAttribute("data-value")||a.cells[col].textContent.trim();var bv=b.cells[col].getAttribute("data-value")||b.cells[col].textContent.trim();
+        var an=Number(av.replace(/[^0-9,.-]/g,"").replace(",","."));var bn=Number(bv.replace(/[^0-9,.-]/g,"").replace(",","."));
+        var numeric=av!==""&&bv!==""&&!Number.isNaN(an)&&!Number.isNaN(bn);var cmp=numeric?an-bn:av.localeCompare(bv,"es",{numeric:true,sensitivity:"base"});return dir==="asc"?cmp:-cmp;
+      }).forEach(function(row){body.appendChild(row);});
+    });});
   });
 
   /* Pestañas */
