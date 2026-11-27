@@ -21,6 +21,8 @@
 
   /* Contador animado para números */
   function countUp(el) {
+    if (el.getAttribute("data-counted") === "true") return;
+    el.setAttribute("data-counted", "true");
     var to = parseFloat(el.getAttribute("data-to"));
     var dec = parseInt(el.getAttribute("data-dec") || "0", 10);
     var sign = el.getAttribute("data-sign") === "-" ? "−" : "";
