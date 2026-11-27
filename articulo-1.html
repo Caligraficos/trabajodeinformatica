@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proyecto de Informática — Trabajo de Informática</title>
+  <title>El impacto de las plataformas digitales en la salud mental de los niños de 2 a 8 años</title>
   <meta name="description" content="Proyecto de Informática. Documento del trabajo, texto reproducido del archivo original.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="article.css">
@@ -25,11 +25,11 @@
 
     <section class="a-hero">
       <div class="container">
-        <span class="kicker">Proyecto de Informática</span>
-        <h1>Proyecto de Informática</h1>
-        <div class="meta"></div>
-        
-        <div class="authors reveal"><span class="authors-label">Profesora</span><ul><li>Dra. Roraxy Fonseca</li></ul></div>
+        <span class="kicker">Proyecto de Informática · Investigación</span>
+        <h1>El impacto de las <em>plataformas digitales</em> en la salud mental de los niños de 2 a 8 años</h1>
+        <div class="meta"><span>Maracaibo, Venezuela</span><span>19 de septiembre de 2026</span></div>
+        <div class="authors reveal"><span class="authors-label">Autores</span><ul><li>Maryelis de los Ángeles Clavero Silva</li><li>Yeferson Cristóbal Castilla Contreras</li></ul></div>
+        <div class="authors reveal"><span class="authors-label">Profesores</span><ul><li>Roraxy</li></ul></div>
       </div>
     </section>
 
@@ -167,6 +167,23 @@
 <p>De esta manera, la técnica y el instrumento permitirán recopilar información de forma ordenada y coherente con los objetivos de la investigación, evitando incorporar datos que no tengan relación directa con el tema.</p>
 <h2>Resultados</h2>
 <p>A partir de las investigaciones seleccionadas, se encontraron diferentes resultados relacionados con el uso de plataformas digitales y el bienestar de los niños. Los estudios revisados muestran que la relación entre el uso de pantallas y la salud mental infantil es complicada y puede estar influenciada por factores como el tiempo en las pantallas, el tipo de contenido, la edad del niño, la finalidad del uso y la participación de los padres.</p>
+<section class="study-visual" aria-label="Visualización de cifras citadas en la investigación">
+  <p class="study-eyebrow">Cifras reportadas en las investigaciones citadas</p>
+  <h3>Datos de los estudios revisados</h3>
+  <p class="study-intro">Las siguientes barras representan cantidades mencionadas en el texto. Son dos investigaciones distintas y no constituyen porcentajes de riesgo ni mediciones propias del equipo.</p>
+  <div class="study-panel">
+    <div class="study-panel-head"><strong>Revisión publicada en 2025</strong><span>Revisión sobre uso de pantallas</span></div>
+    <div class="study-metric"><span>Estudios incluidos</span><div class="study-track"><i style="--bar:100%"></i></div><b>132</b></div>
+    <div class="study-metric"><span>Estudios analizados</span><div class="study-track"><i style="--bar:88.6%"></i></div><b>117</b></div>
+    <div class="study-count"><strong>292.739</strong><span>niños incluidos en el análisis</span></div>
+  </div>
+  <div class="study-panel">
+    <div class="study-panel-head"><strong>JAMA Pediatrics (2024)</strong><span>Primera infancia</span></div>
+    <div class="study-metric"><span>Estudios</span><div class="study-track"><i style="--bar:75.8%"></i></div><b>100</b></div>
+    <div class="study-count"><strong>176.742</strong><span>participantes</span></div>
+  </div>
+  <p class="study-footnote">Las longitudes de las barras se escalan dentro de cada bloque de datos; no comparan poblaciones ni resultados entre investigaciones.</p>
+</section>
 <h3>9.1. Tiempo de uso a las pantallas</h3>
 <p>Uno de los aspectos más estudiados es el tiempo que los niños permanecen frente a dispositivos electrónicos. Una revisión y un análisis centrada en niños menores de cinco años encontró una asociación entre un mayor tiempo de pantalla y dificultades en el desarrollo socioemocional. En particular, el análisis encontró asociaciones con problemas emocionales e hiperactividad. Sin embargo, los investigadores también señalaron la necesidad de considerar otros factores relacionados con el entorno del niño.</p>
 <p>Estos resultados son relevantes para nuestro proyecto porque una parte de la población estudiada corresponde a niños de 2 a 5 años. Sin embargo, los resultados no deben interpretarse como una prueba de que el tiempo de pantalla sea, por sí solo, la causa de estos problemas.</p>
@@ -248,5 +265,18 @@
   </footer>
 
   <script src="article.js"></script>
+  <script>
+  (() => {
+    const section = document.querySelector('.study-visual');
+    if (!section) return;
+    const activate = () => section.classList.add('is-visible');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { activate(); observer.disconnect(); }
+      }), { threshold: 0.18 });
+      observer.observe(section);
+    } else activate();
+  })();
+  </script>
 </body>
 </html>
