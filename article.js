@@ -138,3 +138,6 @@
     update();
   });
 })();
+
+/* Realce de la sección activa en el mapa de lectura */
+var mapLinks=document.querySelectorAll(".vr-map-card");var mapTargets=Array.from(mapLinks).map(function(link){return document.querySelector(link.getAttribute("href"));}).filter(Boolean);if("IntersectionObserver" in window&&mapTargets.length){var mapObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){mapLinks.forEach(function(link){link.classList.toggle("is-current",link.getAttribute("href")==="#"+entry.target.id);});}});},{rootMargin:"-18% 0px -68% 0px"});mapTargets.forEach(function(target){mapObserver.observe(target);});}
