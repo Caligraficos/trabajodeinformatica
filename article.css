@@ -303,3 +303,10 @@ table.compare tbody tr:last-child td { border-bottom: none; }
 .doc .a1-title-icon svg{display:block;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
 .doc h2 .a1-title-icon{width:34px;height:34px}.doc h3 .a1-title-icon{width:29px;height:29px}.doc h4 .a1-title-icon{width:26px;height:26px}
 .doc h2:hover .a1-title-icon,.doc h3:hover .a1-title-icon,.doc h4:hover .a1-title-icon{color:#18827d;border-color:rgba(53,166,160,.3);background:linear-gradient(145deg,#e8f5f2,#f1edf9)}
+
+.doc p.country-marker{display:flex!important;align-items:center;gap:.8rem;margin:1.25rem 0 .65rem!important;padding:.8rem 1rem!important;border:1px solid #e5dcef!important;border-left:3px solid #8b72b1!important;border-radius:0 14px 14px 0!important;background:linear-gradient(100deg,#faf7ff,#f2f9f8)!important;box-shadow:0 5px 16px rgba(39,29,65,.045)!important;color:#332844!important;line-height:1.25!important}
+.country-flag{display:grid;place-items:center;flex:0 0 42px;width:42px;height:28px;border:1px solid rgba(55,45,70,.12);border-radius:5px;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(30,25,45,.1)}
+.country-flag svg{display:block;width:100%;height:100%}
+.country-index{font-size:.62rem!important;letter-spacing:.11em;font-weight:850;color:#7a65a0!important;white-space:nowrap}
+.doc p.country-marker strong{margin-left:auto;padding:.35rem .7rem;border-radius:30px;background:#eee8f7;color:#4e3976!important;font-size:.9rem;font-weight:850;white-space:nowrap;text-decoration:underline;text-decoration-color:rgba(53,166,160,.75);text-decoration-thickness:2px;text-underline-offset:4px}
+@media(max-width:480px){.doc p.country-marker{gap:.55rem;padding:.75rem!important}.country-index{font-size:.55rem!important}.doc p.country-marker strong{font-size:.82rem}}
