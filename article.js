@@ -6,6 +6,8 @@
     }).format(n);
   };
 
+  var boards=document.querySelectorAll(".insight-board");
+  if("IntersectionObserver" in window){var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");bo.unobserve(e.target);}});},{threshold:.15});boards.forEach(function(b){bo.observe(b);});}else{boards.forEach(function(b){b.classList.add("in");});}
   /* Barra de progreso de lectura */
   var bar = document.querySelector(".progress");
   function onScroll() {
