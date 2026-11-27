@@ -144,3 +144,43 @@ var mapLinks=document.querySelectorAll(".vr-map-card");var mapTargets=Array.from
 
 /* Artículo 1 · mapa activo según la sección visible */
 var a1Links=document.querySelectorAll(".a1-map-card");var a1Targets=Array.from(a1Links).map(function(link){return document.querySelector(link.getAttribute("href"));}).filter(Boolean);if("IntersectionObserver" in window&&a1Targets.length){var a1Observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){a1Links.forEach(function(link){link.classList.toggle("is-current",link.getAttribute("href")==="#"+entry.target.id);});}});},{rootMargin:"-18% 0px -68% 0px"});a1Targets.forEach(function(target){a1Observer.observe(target);});}
+
+/* Contextual SVG icons for article 1 headings */
+
+(function(){
+ var map=document.querySelector(".article1-reading-map"); if(!map)return;
+ var paths={
+ brain:'<path d="M9 4.5a3 3 0 0 0-5.5 1.7A3.5 3.5 0 0 0 3 12a3.5 3.5 0 0 0 2.5 5.8A3 3 0 0 0 11 19V5a2 2 0 0 0-2-2"/><path d="M15 4.5a3 3 0 0 1 5.5 1.7A3.5 3.5 0 0 1 21 12a3.5 3.5 0 0 1-2.5 5.8A3 3 0 0 1 13 19V5a2 2 0 0 1 2-2"/>',
+ screen:'<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4M7 8h10m-10 4h6"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ content:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8m-8 4h8m-8 4h5"/>',
+ family:'<path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><circle cx="10" cy="8" r="3.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7m1 3h1.5a3.5 3.5 0 0 1 2.5 3.3V20"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+ search:'<circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/>',
+ book:'<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22z"/><path d="M4 5.5v14A2.5 2.5 0 0 1 6.5 17H20"/>',
+ flask:'<path d="M9 3h6m-5 0v6l-5.5 9.2A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.8L14 9V3"/><path d="M8 15h8"/>',
+ chart:'<path d="M4 19.5h16"/><path d="M6.5 16V10m5.5 6V5m5.5 11v-8"/>',
+ light:'<path d="M9 18h6m-5 3h4m-2-20a7 7 0 0 0-4.2 12.6c.8.6 1.2 1.3 1.2 2.4h6c0-1.1.4-1.8 1.2-2.4A7 7 0 0 0 12 1z"/>',
+ scale:'<path d="M12 3v18m-7-15h14M5 6l-3 6h6L5 6zm14 0-3 6h6l-3-6zM8 21h8"/>',
+ clipboard:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5h6V7H9zM8 11h8m-8 4h8"/>'
+ };
+ function choose(t){t=t.toLowerCase();
+ if(/salud mental|emocion|socioemocional|comportamiento|desarrollo infantil/.test(t))return "brain";
+ if(/pantalla|plataforma|digital|dispositivo/.test(t))return "screen";
+ if(/tiempo|sueño|hábito|descanso/.test(t))return "clock";
+ if(/contenido/.test(t))return "content";
+ if(/padres|familia|hogar|acompañamiento|docentes|instituciones/.test(t))return "family";
+ if(/objetivo|propósito|formulación/.test(t))return "target";
+ if(/problema|pregunta/.test(t))return "search";
+ if(/antecedente|teórica|contrastación|referencia/.test(t))return "book";
+ if(/investigación|metodología|técnica|instrumento|proceso|recolección/.test(t))return "flask";
+ if(/resultado|dato|cifra|síntesis|estadístic/.test(t))return "chart";
+ if(/conclusión|recomendación|justificación/.test(t))return "light";
+ if(/variable/.test(t))return "scale"; return "clipboard";
+ }
+ document.querySelectorAll(".doc h2,.doc h3,.doc h4").forEach(function(h){
+ if(h.closest(".article1-reading-map")||h.querySelector(".a1-heading-icon,.a1-title-icon"))return;
+ var span=document.createElement("span");span.className="a1-title-icon";span.setAttribute("aria-hidden","true");
+ span.innerHTML='<svg viewBox="0 0 24 24">'+paths[choose(h.textContent||"")]+'</svg>';h.insertBefore(span,h.firstChild);
+ });
+})();
