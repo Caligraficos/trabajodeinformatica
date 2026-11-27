@@ -141,3 +141,6 @@
 
 /* Realce de la sección activa en el mapa de lectura */
 var mapLinks=document.querySelectorAll(".vr-map-card");var mapTargets=Array.from(mapLinks).map(function(link){return document.querySelector(link.getAttribute("href"));}).filter(Boolean);if("IntersectionObserver" in window&&mapTargets.length){var mapObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){mapLinks.forEach(function(link){link.classList.toggle("is-current",link.getAttribute("href")==="#"+entry.target.id);});}});},{rootMargin:"-18% 0px -68% 0px"});mapTargets.forEach(function(target){mapObserver.observe(target);});}
+
+/* Artículo 1 · mapa activo según la sección visible */
+var a1Links=document.querySelectorAll(".a1-map-card");var a1Targets=Array.from(a1Links).map(function(link){return document.querySelector(link.getAttribute("href"));}).filter(Boolean);if("IntersectionObserver" in window&&a1Targets.length){var a1Observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){a1Links.forEach(function(link){link.classList.toggle("is-current",link.getAttribute("href")==="#"+entry.target.id);});}});},{rootMargin:"-18% 0px -68% 0px"});a1Targets.forEach(function(target){a1Observer.observe(target);});}
