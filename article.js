@@ -18,16 +18,27 @@
       "ansiedad anticipatoria","analgesia no farmacológica","seguridad virtual","orientación pedagógica",
       "confianza intrafamiliar","ciberacoso","privacidad","acompañamiento adulto"
     ];
-    var pattern = new RegExp("(" + terms.sort(function(a,b){return b.length-a.length;}).map(function(t){return t.replace(/[.*+?^${}()|[\]\\]/g,"\\  /* Barra de progreso de lectura */");}).join("|") + ")", "gi");
+    var pattern = new RegExp("(" + terms.sort(function(a,b){return b.length-a.length;}).join("|") + ")", "gi");
     root.querySelectorAll(".doc p").forEach(function(p){
       if(p.closest(".abstract-full")) return;
-      var walker=document.createTreeWalker(p,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentElement && !n.parentElement.closest("strong,b,a,em,.keyword-mark,code") && pattern.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;}});
-      var nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+      var walker=document.createTreeWalker(p,NodeFilter.SHOW_TEXT);
+      var nodes=[];
+      while(walker.nextNode()){
+        var node=walker.currentNode;
+        if(!node.parentElement || node.parentElement.closest("strong,b,a,em,.keyword-mark,code")) continue;
+        pattern.lastIndex=0;
+        if(pattern.test(node.nodeValue)) nodes.push(node);
+      }
       nodes.forEach(function(node){
-        pattern.lastIndex=0; var value=node.nodeValue, frag=document.createDocumentFragment(), last=0, match;
+        pattern.lastIndex=0;
+        var value=node.nodeValue, frag=document.createDocumentFragment(), last=0, match;
         while((match=pattern.exec(value))!==null){
           if(match.index>last) frag.appendChild(document.createTextNode(value.slice(last,match.index)));
-          var mark=document.createElement("strong"); mark.className="keyword-mark"; mark.textContent=match[0]; frag.appendChild(mark); last=pattern.lastIndex;
+          var mark=document.createElement("strong");
+          mark.className="keyword-mark";
+          mark.textContent=match[0];
+          frag.appendChild(mark);
+          last=pattern.lastIndex;
         }
         if(last<value.length) frag.appendChild(document.createTextNode(value.slice(last)));
         if(last>0) node.parentNode.replaceChild(frag,node);
